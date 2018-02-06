@@ -19,6 +19,12 @@ import java.util.Date;
  * add nike china
  * add nike us
  * 
+ * 2/8 4:00pm, test adi us
+ * 2/18 10:00pm, adi us, bape dame 4, dame-4--bape-shoes/AP9975, dame-4--bape-shoes/AP9974
+ * 2/10 9:00am, nike china, jordan 1 gold toe
+ * 2/16 footlocker/finish line, gold toe
+ * 2/24 footlocker, bredtoe
+ * 
  * 
  */
 public class bots {
