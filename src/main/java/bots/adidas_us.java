@@ -88,7 +88,7 @@ public class adidas_us extends Common{
         add_to_bag.click();
         
             try{
-                Thread.sleep(2000);
+                Thread.sleep(10000);
             }
                 catch (InterruptedException e){
             }

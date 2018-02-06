@@ -11,6 +11,15 @@ import java.util.Date;
 /**
  *
  * @author damaomao
+ * next:
+ * bots can use different account
+ * bots can pick up different sizes
+ * bots can pick up different products at the same time
+ * set policy: 1. account 2.size 3. quantity 4. product
+ * add nike china
+ * add nike us
+ * 
+ * 
  */
 public class bots {
     public static void main(String[] args) throws InterruptedException{       
