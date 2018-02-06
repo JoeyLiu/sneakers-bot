@@ -32,26 +32,26 @@ public class footlocker extends Common{
     public void setSku(String sku){
         footlocker.sku = sku;
     }
+    
     @Override
-    public void cop(){
-        Set<Cookie> cks = login();
-         
+    public void cops(){
+        cks = login();
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Runnable copone = () -> {
-            WebDriver driver=firefox.launch();
-            driver.get(getURL());
-            for (Cookie ck : cks) {
-               Cookie newck = new Cookie(ck.getName(),ck.getValue(),ck.getDomain(),ck.getPath(),ck.getExpiry(),ck.isSecure());
-               driver.manage().addCookie(newck);
-                
-            }
-            driver.get(getURL());
+            cop();
         };
         executor.execute(copone);
         executor.execute(copone);
         executor.execute(copone);
         
         executor.shutdownNow();
+    }
+    
+    @Override
+    public void cop(){
+        
+         
+        
         
 //            WebElement sizeButton = driver.findElement(By.id(("pdp_size_select_container")));
 //            sizeButton.click();
@@ -102,6 +102,7 @@ public class footlocker extends Common{
             //Thread.sleep(3000);
             //driver.quit();
     }
+    
     private Set<Cookie> login(){
         WebDriver driver = firefox.launch();
         driver.get(getURL());
@@ -127,7 +128,7 @@ public class footlocker extends Common{
             catch (InterruptedException e){
             }
             driver.switchTo().defaultContent();
-            Set<Cookie> cks = driver.manage().getCookies();
+            cks = driver.manage().getCookies();
             return cks;
     }
 }

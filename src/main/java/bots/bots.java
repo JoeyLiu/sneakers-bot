@@ -5,6 +5,9 @@
  */
 package bots;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author damaomao
@@ -28,7 +31,9 @@ public class bots {
             adi.setProductName("dame-4-shoes");
             adi.setSKU("AC8646");
             adi.setSize("8.5");
-            adi.cop();
+            adi.setClock(0, 10);
+            adi.cops();
+        
 
     }
 }

@@ -5,7 +5,9 @@
  */
 package bots;
 
+import java.util.Set;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -20,6 +22,11 @@ public class trophyroom extends Common{
     public String getURL(){
         return BASEURL + productName;
     }
+    @Override
+    public void cops(){
+        
+    }
+    
     @Override
     public void cop(){
         WebDriver driver = firefox.launch();
