@@ -48,7 +48,7 @@ public class adidas_us extends Common{
             }
             catch (InterruptedException e){
             }
-                    WebElement size = driver.findElement(By.xpath("//div[@data-auto-id='item-wrapper']//li[@title='7']"));
+                    WebElement size = driver.findElement(By.xpath("//div[@data-auto-id='item-wrapper']//li[@title='" + getSize() + "']"));
                     size.click();
                     
     }

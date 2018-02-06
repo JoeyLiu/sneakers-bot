@@ -25,8 +25,8 @@ public class bots {
 //        tr.cop();
           
             adidas_us adi = new adidas_us();
-            adi.setProductName("ultraboost-laceless-shoes");
-            adi.setSKU("BB6137");
+            adi.setProductName("dame-4-shoes");
+            adi.setSKU("AC8646");
             adi.setSize("8.5");
             adi.cop();
 
