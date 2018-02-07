@@ -49,9 +49,12 @@ public class bots {
 //            adi.cops();
         
             nike_china nike = new nike_china();
-            nike.setProductName("kyrie-4-parquet-legends");
-            nike.setSize("41");
-            nike.setClock(23, 30);
+            nike.setProductName("sb-air-force-2-low-kevin-bradley");
+            nike.setSize("42");
+            //nike.setID("AJ1691-001");
+            nike.setClock(8, 58);
+            //System.out.println(nike.getURL());
+            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
             nike.cops();
 
     }
