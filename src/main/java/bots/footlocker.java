@@ -33,19 +33,7 @@ public class footlocker extends Common{
         footlocker.sku = sku;
     }
     
-    @Override
-    public void cops(){
-        cks = login();
-        ExecutorService executor = Executors.newFixedThreadPool(10);
-        Runnable copone = () -> {
-            cop();
-        };
-        executor.execute(copone);
-        executor.execute(copone);
-        executor.execute(copone);
-        
-        executor.shutdownNow();
-    }
+
     
     @Override
     public void cop(){
@@ -103,7 +91,7 @@ public class footlocker extends Common{
             //driver.quit();
     }
     
-    private Set<Cookie> login(){
+    Set<Cookie> login(){
         WebDriver driver = firefox.launch();
         driver.get(getURL());
         String username = "juneslayer@gmail.com";              

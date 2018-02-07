@@ -29,26 +29,13 @@ public class adidas_us extends Common{
         return BASEURL + productName + "/" + sku + ".html";
     }
     
+     @Override
     public void setProductName(String product){
         productName = product;
     }
     
     public void setSKU(String Sku){
         sku = Sku;
-    }
-    
-    @Override
-    void cops(){
-        cks = login();
-        ExecutorService executor = Executors.newFixedThreadPool(10);
-        Runnable copone = () -> {
-            cop();
-        };
-        executor.execute(copone);
-        //executor.execute(copone);
-        //executor.execute(copone);
-        
-        executor.shutdownNow();
     }
     
     @Override
@@ -110,7 +97,10 @@ public class adidas_us extends Common{
         driver.quit();
         
     }
-    private Set<Cookie> login(){
+    
+    
+     @Override
+    Set<Cookie> login(){
         WebDriver driver = firefox.launch();
         driver.get(getURL());
                     try{
@@ -143,6 +133,7 @@ public class adidas_us extends Common{
             }
             driver.switchTo().defaultContent();
             cks = driver.manage().getCookies();
+            driver.quit();
             return cks;
     }
 }

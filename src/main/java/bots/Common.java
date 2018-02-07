@@ -8,6 +8,8 @@ package bots;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import org.openqa.selenium.Cookie;
 
 /**
@@ -51,8 +53,20 @@ public abstract class Common {
         }
         System.out.println(df.format(current));
     }
-    abstract String getURL();
-    abstract void cops();
+    void cops(){
+        cks = login();
+        ExecutorService executor = Executors.newFixedThreadPool(10);
+        Runnable copone = () -> {
+            cop();
+        };
+        executor.execute(copone);
+        //executor.execute(copone);
+        //executor.execute(copone);
+        
+        executor.shutdownNow();
+    }
+    abstract String getURL();   
+    abstract Set<Cookie> login();
     abstract void cop();
     
 

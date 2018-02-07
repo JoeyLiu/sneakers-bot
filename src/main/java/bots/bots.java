@@ -39,13 +39,17 @@ public class bots {
 //        tr.setSize("8");
 //        tr.cop();
           
-            adidas_us adi = new adidas_us();
-            adi.setProductName("dame-4-shoes");
-            adi.setSKU("AC8646");
-            adi.setSize("8.5");
-            adi.setClock(0, 10);
-            adi.cops();
+//            adidas_us adi = new adidas_us();
+//            adi.setProductName("dame-4-shoes");
+//            adi.setSKU("AC8646");
+//            adi.setSize("8.5");
+//            adi.setClock(0, 10);
+//            adi.cops();
         
+            nike_china nike = new nike_china();
+            nike.setProductName("air-jordan-1-black-metallic-gold-white");
+            nike.setSize("8.5");
+            nike.cops();
 
     }
 }

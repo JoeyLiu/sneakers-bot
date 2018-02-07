@@ -5,9 +5,11 @@
  */
 package bots;
 
+
 import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -23,8 +25,9 @@ public class trophyroom extends Common{
         return BASEURL + productName;
     }
     @Override
-    public void cops(){
+    Set<Cookie> login(){
         
+        return cks;
     }
     
     @Override
