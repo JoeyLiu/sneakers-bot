@@ -5,9 +5,6 @@
  */
 package bots;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  *
  * @author damaomao
