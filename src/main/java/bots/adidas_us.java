@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.InvalidCookieDomainException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -44,8 +45,8 @@ public class adidas_us extends Common{
             cop();
         };
         executor.execute(copone);
-        executor.execute(copone);
-        executor.execute(copone);
+        //executor.execute(copone);
+        //executor.execute(copone);
         
         executor.shutdownNow();
     }
@@ -55,15 +56,26 @@ public class adidas_us extends Common{
         
         WebDriver driver=firefox.launch();
         driver.get(getURL());
+            try{
+                Thread.sleep(3000);
+            }
+            catch (InterruptedException e){
+            }
          for (Cookie ck : cks) {
+             try{
              Cookie newck = new Cookie(ck.getName(),ck.getValue(),ck.getDomain(),ck.getPath(),ck.getExpiry(),ck.isSecure());
              driver.manage().addCookie(newck);
+             }
+             catch (InvalidCookieDomainException e){
+             Cookie newck = new Cookie(ck.getName(),ck.getValue(),"www.adidas.com",ck.getPath(),ck.getExpiry(),ck.isSecure());
+             driver.manage().addCookie(newck);
+             }
          }
         driver.get(getURL());
             try{
                 Thread.sleep(3000);
             }
-                catch (InterruptedException e){
+            catch (InterruptedException e){
             }
             
         redayToStart();
