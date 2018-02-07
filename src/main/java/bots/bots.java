@@ -47,8 +47,9 @@ public class bots {
 //            adi.cops();
         
             nike_china nike = new nike_china();
-            nike.setProductName("air-jordan-1-black-metallic-gold-white");
-            nike.setSize("8.5");
+            nike.setProductName("kyrie-4-parquet-legends");
+            nike.setSize("41");
+            nike.setClock(22, 40);
             nike.cops();
 
     }

@@ -6,6 +6,7 @@
 package bots;
 
 import static bots.Common.cks;
+import java.util.List;
 import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
@@ -27,8 +28,17 @@ public class nike_china extends Common{
     
     @Override
     Set<Cookie> login(){
+        
+        
+        return cks;
+    }
+            
+    void cop(){
+        /*
+        * login
+        */
         WebDriver driver = firefox.launch();
-        driver.get(getURL());
+        driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends");
             try{
                 Thread.sleep(1000);
             }
@@ -44,6 +54,7 @@ public class nike_china extends Common{
             }
             catch (InterruptedException e){
             }
+           
         WebElement user = driver.findElement(By.name("emailAddress"));
         user.sendKeys(username);
         WebElement pwd = driver.findElement(By.name("password"));
@@ -55,47 +66,88 @@ public class nike_china extends Common{
             }
             catch (InterruptedException e){
             }
-            
-            cks = driver.manage().getCookies();    
-            
-        driver.quit();
-        return cks;
-    }
-            
-    void cop(){
-        WebDriver driver=firefox.launch();
-        driver.get(getURL());
-            try{
-                Thread.sleep(3000);
-            }
-            catch (InterruptedException e){
-            }
-         for (Cookie ck : cks) {
-             
-             try{
-             Cookie newck = new Cookie(ck.getName(),ck.getValue(),ck.getDomain(),ck.getPath(),ck.getExpiry(),ck.isSecure());
-             driver.manage().addCookie(newck);
-             }
-             catch (InvalidCookieDomainException e){
-             //Cookie newck = new Cookie(ck.getName(),ck.getValue(),"www.nike.com",ck.getPath(),ck.getExpiry(),ck.isSecure());
-             //driver.manage().addCookie(newck);
-                //e.printStackTrace();
-                Set<Cookie> temp = driver.manage().getCookies(); 
-                for(Cookie tem:temp){
-                    System.out.println(ck.getDomain() + " - " + tem.getDomain());
-
-                }
-             }
-         }
-        driver.get(getURL());
+           //driver.get(getURL());
+          
+        /*
+           choose AliPay
+           */
+        
+        
+        WaitAndClick("//div[@data-juno-name='sizeSelector']", driver);         
+       
                     try{
-                Thread.sleep(3000);
+            Thread.sleep(500);
             }
             catch (InterruptedException e){
             }
-                    
-                    
-        driver.quit();
+        //WaitAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
+        WebElement size = driver.findElement(By.xpath("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']"));
+        size.click();
+        
+        WebElement buy = driver.findElement(By.partialLinkText("购买"));
+        buy.click();
+            try{
+                Thread.sleep(6500);
+            }
+                catch (InterruptedException e){
+            }
+            WebElement aliPay = driver.findElement(By.xpath("//a[@data-provide='aliPayId']"));
+        aliPay.click();
+        //WaitAndClick("//a[@data-provide='aliPayId']", driver);
+                   try{
+                Thread.sleep(5500);
+            }
+                catch (InterruptedException e){
+            }
+        //WaitAndClick("//div[@data-juno-name='saveButton']", driver);
+        
+        
+        WebElement save = driver.findElements(By.partialLinkText("保存并继续")).get(2);
+        save.click();
+            try{
+                Thread.sleep(1500);
+            }
+                catch (InterruptedException e){
+            }
+        /*
+        get back to product
+        */
+        driver.get(getURL());
+        
+       /*
+        ready to start
+        */
+       redayToStart();
+       
+       /*
+       start
+       */
+       
+       WaitAndClick("//div[@data-juno-name='sizeSelector']", driver);
+            try{
+            Thread.sleep(1000);
+            }
+            catch (InterruptedException e){
+            }
+       
+        size = driver.findElement(By.xpath("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']"));
+        size.click();
+            try{
+                Thread.sleep(1000);
+            }
+                catch (InterruptedException e){
+            }
+        buy = driver.findElement(By.partialLinkText("购买"));
+        buy.click();
+        
+                    try{
+                Thread.sleep(3500);
+            }
+                catch (InterruptedException e){
+            }
+        WebElement order = driver.findElement(By.partialLinkText("提交订单"));
+        order.click();
+        //driver.quit();
     }        
     
 }

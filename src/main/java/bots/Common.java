@@ -10,7 +10,11 @@ import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 /**
  *
@@ -64,6 +68,25 @@ public abstract class Common {
         //executor.execute(copone);
         
         executor.shutdownNow();
+    }
+    void WaitAndClick(String xpath, WebDriver driver){
+        try{
+        WebElement we = driver.findElement(By.xpath(xpath));
+        System.out.println("Found and Click");
+        we.click();
+        }
+        catch (NoSuchElementException e){
+            try{
+            Thread.currentThread().sleep(500);
+            }
+            catch(InterruptedException e2){
+                
+            }
+            System.out.println("waiting..." + xpath);
+            WaitAndClick(xpath, driver);
+        }
+        
+        
     }
     abstract String getURL();   
     abstract Set<Cookie> login();
