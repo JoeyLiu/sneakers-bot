@@ -45,7 +45,7 @@ public class nike_china extends Common{
                 catch (InterruptedException e){
             }
         
-            String username = "juneslayer@gmail.com";              
+        String username = "juneslayer@gmail.com";              
         String password = "Lyly19821225";
         WebElement login = driver.findElement(By.xpath("//a[@aria-label='加入或登录']"));
         login.click();
@@ -73,16 +73,16 @@ public class nike_china extends Common{
            */
         
         
-        WaitAndClick("//div[@data-juno-name='sizeSelector']", driver);         
+        TryAndClick("//div[@data-juno-name='sizeSelector']", driver);         
        
-                    try{
-            Thread.sleep(500);
-            }
-            catch (InterruptedException e){
-            }
-        //WaitAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
-        WebElement size = driver.findElement(By.xpath("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']"));
-        size.click();
+//                    try{
+//            Thread.sleep(500);
+//            }
+//            catch (InterruptedException e){
+//            }
+        TryAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
+//        WebElement size = driver.findElement(By.xpath("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']"));
+//        size.click();
         
         WebElement buy = driver.findElement(By.partialLinkText("购买"));
         buy.click();
@@ -91,8 +91,10 @@ public class nike_china extends Common{
             }
                 catch (InterruptedException e){
             }
-            WebElement aliPay = driver.findElement(By.xpath("//a[@data-provide='aliPayId']"));
-        aliPay.click();
+            
+        TryAndClick("//a[@data-provide='aliPayId']", driver);
+//        WebElement aliPay = driver.findElement(By.xpath("//a[@data-provide='aliPayId']"));
+//        aliPay.click();
         //WaitAndClick("//a[@data-provide='aliPayId']", driver);
                    try{
                 Thread.sleep(5500);
@@ -101,7 +103,7 @@ public class nike_china extends Common{
             }
         //WaitAndClick("//div[@data-juno-name='saveButton']", driver);
         
-        
+        //TryAndClick("//a[text()='保存并继续']", driver);
         WebElement save = driver.findElements(By.partialLinkText("保存并继续")).get(2);
         save.click();
             try{
@@ -122,31 +124,24 @@ public class nike_china extends Common{
        /*
        start
        */
+       long begin = System.currentTimeMillis();
+       TryAndClick("//div[@data-juno-name='sizeSelector']", driver);         
        
-       WaitAndClick("//div[@data-juno-name='sizeSelector']", driver);
-            try{
-            Thread.sleep(1000);
-            }
-            catch (InterruptedException e){
-            }
-       
-        size = driver.findElement(By.xpath("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']"));
-        size.click();
-            try{
-                Thread.sleep(1000);
-            }
-                catch (InterruptedException e){
-            }
+//                    try{
+//            Thread.sleep(500);
+//            }
+//            catch (InterruptedException e){
+//            }
+        TryAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
+
         buy = driver.findElement(By.partialLinkText("购买"));
         buy.click();
-        
-                    try{
-                Thread.sleep(3500);
-            }
-                catch (InterruptedException e){
-            }
-        WebElement order = driver.findElement(By.partialLinkText("提交订单"));
-        order.click();
+                    
+        TryAndClick("//a[text()='提交订单']", driver);
+        long end = System.currentTimeMillis();
+        System.out.println(end-begin);
+        //WebElement order = driver.findElement(By.partialLinkText("提交订单"));
+        //order.click();
         //driver.quit();
     }        
     

@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -69,21 +70,21 @@ public abstract class Common {
         
         executor.shutdownNow();
     }
-    void WaitAndClick(String xpath, WebDriver driver){
+    void TryAndClick(String xpath, WebDriver driver){
         try{
-        WebElement we = driver.findElement(By.xpath(xpath));
+        WebElement ele = driver.findElement(By.xpath(xpath));
         System.out.println("Found and Click");
-        we.click();
+        ele.click();
         }
-        catch (NoSuchElementException e){
+        catch (NoSuchElementException|ElementNotInteractableException e){
             try{
-            Thread.currentThread().sleep(500);
+            Thread.currentThread().sleep(100);
             }
             catch(InterruptedException e2){
                 
             }
-            System.out.println("waiting..." + xpath);
-            WaitAndClick(xpath, driver);
+            System.out.println("Try..." + xpath);
+            TryAndClick(xpath, driver);
         }
         
         

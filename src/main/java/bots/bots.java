@@ -13,7 +13,8 @@ package bots;
  * bots can pick up different sizes
  * bots can pick up different products at the same time
  * set policy: 1. account 2.size 3. quantity 4. product
- * add nike china
+ * add nike china: 2390ms placing an order
+ *  - repeat if fail
  * add nike us
  * 
  * 2/8 4:00pm, test adi us
@@ -21,6 +22,7 @@ package bots;
  * 2/10 9:00am, nike china, jordan 1 gold toe
  * 2/16 footlocker/finish line, gold toe
  * 2/24 footlocker, bredtoe
+ * 
  * 
  * 
  */
@@ -49,7 +51,7 @@ public class bots {
             nike_china nike = new nike_china();
             nike.setProductName("kyrie-4-parquet-legends");
             nike.setSize("41");
-            nike.setClock(22, 40);
+            nike.setClock(23, 30);
             nike.cops();
 
     }
