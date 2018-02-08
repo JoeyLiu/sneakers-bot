@@ -73,12 +73,13 @@ public abstract class Common {
     void TryAndClick(String xpath, WebDriver driver){
         try{
         WebElement ele = driver.findElement(By.xpath(xpath));
-        System.out.println("Found and Click");
+        System.out.println("Found");
         ele.click();
+        System.out.println("Clicked");
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
             try{
-            Thread.currentThread().sleep(100);
+            Thread.currentThread().sleep(10);
             }
             catch(InterruptedException e2){
                 

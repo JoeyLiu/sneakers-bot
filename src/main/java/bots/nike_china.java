@@ -140,6 +140,14 @@ public class nike_china extends Common{
         TryAndClick("//a[text()='提交订单']", driver);
         long end = System.currentTimeMillis();
         System.out.println(end-begin);
+        
+        int i=0;
+        while(i<200){
+            
+        TryAndClick("//a[text()='提交订单']", driver);
+        i++;
+        }
+        System.out.println("try " + i + " times done");
         //WebElement order = driver.findElement(By.partialLinkText("提交订单"));
         //order.click();
         //driver.quit();

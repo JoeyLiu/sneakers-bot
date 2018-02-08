@@ -30,7 +30,7 @@ public class firefox {
      */
     public static WebDriver launch() {
         FirefoxBinary firefoxBinary = new FirefoxBinary();
-         firefoxBinary.addCommandLineOptions("--headless");
+        // firefoxBinary.addCommandLineOptions("--headless");
          System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
        firefoxOptions.setBinary(firefoxBinary);
