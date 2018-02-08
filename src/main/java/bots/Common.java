@@ -59,12 +59,16 @@ public abstract class Common {
         System.out.println(df.format(current));
     }
     void cops(){
+        int threads = 3;
         cks = login();
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newFixedThreadPool(threads);
         Runnable copone = () -> {
             cop();
         };
-        executor.execute(copone);
+        for(int i=0;i<threads;i++){
+            executor.execute(copone);
+        }
+        
         //executor.execute(copone);
         //executor.execute(copone);
         
@@ -73,12 +77,13 @@ public abstract class Common {
     void TryAndClick(String xpath, WebDriver driver){
         try{
         WebElement ele = driver.findElement(By.xpath(xpath));
-        System.out.println("Found and Click");
+        System.out.println("Found");
         ele.click();
+        System.out.println("Clicked");
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
             try{
-            Thread.currentThread().sleep(100);
+            Thread.currentThread().sleep(10);
             }
             catch(InterruptedException e2){
                 

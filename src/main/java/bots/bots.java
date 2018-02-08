@@ -14,7 +14,7 @@ package bots;
  * bots can pick up different products at the same time
  * set policy: 1. account 2.size 3. quantity 4. product
  * add nike china: 2390ms placing an order
- *  - repeat if fail
+ *  - repeat if fail. done. try 200 times.
  * add nike us
  * 
  * 2/8 4:00pm, test adi us
@@ -51,8 +51,8 @@ public class bots {
             nike_china nike = new nike_china();
             nike.setProductName("sb-air-force-2-low-kevin-bradley");
             nike.setSize("42");
-            //nike.setID("AJ1691-001");
-            nike.setClock(8, 58);
+            //nike.setID("AO0298-114");
+            nike.setClock(14, 54);
             //System.out.println(nike.getURL());
             //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
             nike.cops();
