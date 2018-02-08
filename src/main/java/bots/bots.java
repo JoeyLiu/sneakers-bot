@@ -48,11 +48,11 @@ public class bots {
 //            adi.setClock(0, 10);
 //            adi.cops();
         
-            nike_china nike = new nike_china();
-            nike.setProductName("sb-air-force-2-low-kevin-bradley");
+            nike_china_fast nike = new nike_china_fast();
+            nike.setProductName("air-vapormax-plus-white-pure-platinum");
             nike.setSize("42");
-            //nike.setID("AO0298-114");
-            nike.setClock(14, 54);
+            nike.setID("854262-001");
+            nike.setClock(8, 59);
             //System.out.println(nike.getURL());
             //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
             nike.cops();

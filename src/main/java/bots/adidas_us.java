@@ -7,8 +7,6 @@ package bots;
 
 
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.InvalidCookieDomainException;
@@ -39,7 +37,7 @@ public class adidas_us extends Common{
     }
     
     @Override
-    void cop(){
+    void cop(int userID){
         
         WebDriver driver=firefox.launch();
         driver.get(getURL());

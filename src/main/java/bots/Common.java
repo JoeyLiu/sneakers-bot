@@ -29,6 +29,7 @@ public abstract class Common {
     static Date target = new Date();
     static Date current;
     
+    
     void setProductName(String productName){
         Common.productName = productName;
     }
@@ -49,32 +50,44 @@ public abstract class Common {
         current = new Date();       
         while(target.compareTo(current) > 0){
             try{
-                Thread.sleep(500);
+                Thread.sleep(50);
             }
                 catch (InterruptedException e){
             }
             current = new Date();
-            System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
+            //System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
         }
         System.out.println(df.format(current));
     }
     void cops(){
-        int threads = 3;
+        int threads = 2;
         cks = login();
         ExecutorService executor = Executors.newFixedThreadPool(threads);
-        Runnable copone = () -> {
-            cop();
-        };
+//        Runnable copone = () -> {
+//            cop();
+//        };
         for(int i=0;i<threads;i++){
-            executor.execute(copone);
+            copones copone = new copones();
+            copone.setUserID(i);
+            executor.execute(copone);           
         }
         
         //executor.execute(copone);
         //executor.execute(copone);
         
-        executor.shutdownNow();
+        executor.shutdown();
+    }
+    class copones implements Runnable{
+        private int userID;
+        public void run(){
+            cop(userID);
+        }
+        void setUserID(int id){
+            this.userID = id;
+        }
     }
     void TryAndClick(String xpath, WebDriver driver){
+        System.out.println("Try..." + xpath);
         try{
         WebElement ele = driver.findElement(By.xpath(xpath));
         System.out.println("Found");
@@ -82,13 +95,14 @@ public abstract class Common {
         System.out.println("Clicked");
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
+            //e.printStackTrace();
             try{
-            Thread.currentThread().sleep(10);
+            Thread.currentThread().sleep(100);
             }
             catch(InterruptedException e2){
                 
             }
-            System.out.println("Try..." + xpath);
+            
             TryAndClick(xpath, driver);
         }
         
@@ -96,7 +110,7 @@ public abstract class Common {
     }
     abstract String getURL();   
     abstract Set<Cookie> login();
-    abstract void cop();
+    abstract void cop(int userID);
     
 
 }
