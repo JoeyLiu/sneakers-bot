@@ -14,7 +14,7 @@ package bots;
  * bots can pick up different products at the same time
  * set policy: 1. account 2.size 3. quantity 4. product
  * add nike china: 2390ms placing an order
- *  - repeat if fail
+ *  - repeat if fail. done. try 200 times.
  * add nike us
  * 
  * 2/8 4:00pm, test adi us
