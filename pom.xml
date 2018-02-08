@@ -28,7 +28,7 @@
             </descriptorRefs>
             <archive>
                 <manifest>
-                    <mainClass>your.app.MainClass</mainClass>
+                    <mainClass>bots.bots</mainClass>
                 </manifest>
             </archive>
         </configuration>
