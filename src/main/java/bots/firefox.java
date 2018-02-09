@@ -37,7 +37,7 @@ public class firefox {
             return new FirefoxDriver(firefoxOptions);
 //        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver2.35.exe");
 //        ChromeOptions chromeOptions = new ChromeOptions();
-////        设置为 headless 模式 （必须）
+////      设置为 headless 模式 （必须）
 //        chromeOptions.addArguments("--headless");
 //        return new ChromeDriver(chromeOptions);
 

@@ -37,96 +37,49 @@ public class nike_china extends Common{
         */
         WebDriver driver = firefox.launch();
         driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends");
-            try{
-                Thread.currentThread().sleep(1000);
-            }
-                catch (InterruptedException e){
-            }
+        waitforms(1000);
         
         String username = user;              
         String password = "Lyly19821225";
         WebElement login = driver.findElement(By.xpath("//a[@aria-label='加入或登录']"));
         login.click();
-            try{
-            Thread.currentThread().sleep(5000);
-            }
-            catch (InterruptedException e){
-            }
+        waitforms(30000);
            
         WebElement userele = driver.findElement(By.name("emailAddress"));
         userele.sendKeys(username);
         WebElement pwd = driver.findElement(By.name("password"));
         pwd.sendKeys(password);
-         try{
-            Thread.currentThread().sleep(3000);
-            }
-            catch (InterruptedException e){
-            }
+        waitforms(3000);
         WebElement login_btn = driver.findElement(By.xpath("//input[@value='登录']"));
         login_btn.click();
-            try{
-            Thread.currentThread().sleep(1000);
-            }
-            catch (InterruptedException e){
-            }
+        waitforms(5000);
         boolean login_success = false;
         while(!login_success){
             try{
                 WebElement ok = driver.findElement(By.xpath("//input[@value='确定']"));
                 ok.click();
-                try{
-                Thread.currentThread().sleep(3000);
-                }
-                catch (InterruptedException e){
-                }
+                waitforms(3000);
                 login_btn = driver.findElement(By.xpath("//input[@value='登录']"));
                 login_btn.click();
-                try{
-                Thread.currentThread().sleep(3000);
-                }
-                catch (InterruptedException e){
-                }
-                try{
-                    ok = driver.findElement(By.xpath("//input[@value='确定']"));
-                }    
-                catch (NoSuchElementException e){
-                   login_success = true;
-                }
+                waitforms(3000);
              }
             catch (NoSuchElementException e){
-            
+                login_success = true;
             }
         }
-        
-        
-            try{
-            Thread.currentThread().sleep(10000);
-            }
-            catch (InterruptedException e){
-            }
+        waitforms(10000);
            //driver.get(getURL());
           
         /*
            choose AliPay
            */
-        driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends?action=buy&id=AJ1691-001&size=42");
-            
+        driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends?action=buy&id=AJ1691-001&size=42");            
         TryAndClick("//a[@data-provide='aliPayId']", driver);
-
-            try{
-                Thread.currentThread().sleep(5500);
-            }
-                catch (InterruptedException e){
-            }
-
+        waitforms(5500);
         WebElement save = driver.findElements(By.partialLinkText("保存并继续")).get(2);
         save.click();
-            try{
-                Thread.currentThread().sleep(1500);
-            }
-                catch (InterruptedException e){
-            }
-            return driver;
+        waitforms(1500);
+        return driver;
     }        
     void cop(String user){
         WebDriver driver = login(user);
@@ -145,33 +98,42 @@ public class nike_china extends Common{
        */
        System.out.println("Start!");
        long begin = System.currentTimeMillis();
+       /*
+       add driver.get(getURL) to force refresh the page
+       */
+       driver.get(getURL());
+       
        TryAndClick("//div[@data-juno-name='sizeSelector']", driver);         
 
-        TryAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
+       TryAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
 
-        WebElement buy = driver.findElement(By.partialLinkText("购买"));
-        buy.click();
+       WebElement buy = driver.findElement(By.partialLinkText("购买"));
+       buy.click();
                     
-        //TryAndClick("//a[text()='提交订单']", driver);
-        long end = System.currentTimeMillis();
-        System.out.println(end-begin);
+       TryAndClick("//a[text()='提交订单']", driver);
+       long end = System.currentTimeMillis();
+       
         
-        boolean retry = false;
-        WebElement retryele;
-        //p 请重试
-        int i=0;
-        while(i<200){
+       boolean retry = false;
+       
+       
+       int i=0;
+       int j=0;
+       while(i<200 && j<3000){
             try{
-                retryele = driver.findElement(By.partialLinkText("请重试"));               
+                WebElement retryele = driver.findElement(By.partialLinkText("请重试"));               
                 TryAndClick("//a[text()='提交订单']", driver);
                 i++;
             }
             catch(NoSuchElementException e){
+                System.out.println("retry");
                 waitforms(100);
+                j++;
             }
-        }
-       // System.out.println("try " + i + " times done");
-
+       }
+       System.out.println("try " + i + " times done");
+       
+        System.out.println(end-begin);
         //driver.quit();
     }        
     

@@ -49,11 +49,7 @@ public abstract class Common {
         
         current = new Date();       
         while(target.compareTo(current) > 0){
-            try{
-                Thread.sleep(100);
-            }
-                catch (InterruptedException e){
-            }
+            waitforms(100);
             current = new Date();
             System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
         }
@@ -103,12 +99,7 @@ public abstract class Common {
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
             //e.printStackTrace();
-            try{
-            Thread.currentThread().sleep(100);
-            }
-            catch(InterruptedException e2){
-                
-            }
+            waitforms(100);
             
             TryAndClick(xpath, driver);
         }

@@ -51,7 +51,7 @@ public class bots {
             nike_china nike = new nike_china();
             nike.setProductName(args[0]);
             nike.setSize(args[1]);
-            //nike.setID("854262-001");
+            //nike.setID(args[5]);
             nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
             //System.out.println(nike.getURL());
             //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42

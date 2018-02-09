@@ -50,12 +50,7 @@ public class nike_china_fast extends nike_china{
        */
        long begin = System.currentTimeMillis();
        driver.get(getURL());
-       //TryAndClick("//div[@data-juno-name='sizeSelector']", driver);         
 
-        //TryAndClick("//ul[@data-juno-name='sizeGrid']/li[@data-size='" + getSize() + "']", driver);   
-
-        //WebElement buy = driver.findElement(By.partialLinkText("购买"));
-        //buy.click();
         while(true){
            try{     
             WebElement submit = driver.findElement(By.partialLinkText("提交订单"));
@@ -64,31 +59,38 @@ public class nike_china_fast extends nike_china{
             }
            catch(Exception e){
                //e.printStackTrace();
-               
            }
            try{
                driver.findElement(By.partialLinkText("确定")).click();
                driver.get(getURL());
             }
             catch(Exception e2){
-                   
-            }
-               
+            }  
         }
            
         //TryAndClick("//a[text()='提交订单']", driver);
         
         long end = System.currentTimeMillis();
-        System.out.println(end-begin);
-//        
-        int i=0;
-        while(i<200){
-        TryAndClick("//a[text()='提交订单']", driver);
-        i++;
-        }
-        System.out.println("try " + i + " times done");
+        
+        
+       int i=0;
+       int j=0;
+       while(i<200 && j<3000){
+            try{
+                WebElement retryele = driver.findElement(By.partialLinkText("请重试"));               
+                TryAndClick("//a[text()='提交订单']", driver);
+                i++;
+            }
+            catch(NoSuchElementException e){
+                System.out.println("retry");
+                waitforms(100);
+                j++;
+            }
+       }
+       System.out.println("try " + i + " times done");
 
-        driver.quit();
+       System.out.println(end-begin);
+        //driver.quit();
     
     }
             
