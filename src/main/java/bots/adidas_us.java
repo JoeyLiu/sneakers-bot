@@ -37,7 +37,7 @@ public class adidas_us extends Common{
     }
     
     @Override
-    void cop(int userID){
+    void cop(String user){
         
         WebDriver driver=firefox.launch();
         driver.get(getURL());

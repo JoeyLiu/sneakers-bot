@@ -31,7 +31,7 @@ public class nike_china extends Common{
         
         return cks;
     }
-    WebDriver login(int userID){
+    WebDriver login(String user){
         /*
         * login
         */
@@ -43,7 +43,7 @@ public class nike_china extends Common{
                 catch (InterruptedException e){
             }
         
-        String username = USERS[userID];              
+        String username = user;              
         String password = "Lyly19821225";
         WebElement login = driver.findElement(By.xpath("//a[@aria-label='加入或登录']"));
         login.click();
@@ -53,8 +53,8 @@ public class nike_china extends Common{
             catch (InterruptedException e){
             }
            
-        WebElement user = driver.findElement(By.name("emailAddress"));
-        user.sendKeys(username);
+        WebElement userele = driver.findElement(By.name("emailAddress"));
+        userele.sendKeys(username);
         WebElement pwd = driver.findElement(By.name("password"));
         pwd.sendKeys(password);
          try{
@@ -64,25 +64,40 @@ public class nike_china extends Common{
             }
         WebElement login_btn = driver.findElement(By.xpath("//input[@value='登录']"));
         login_btn.click();
-                 try{
+            try{
             Thread.currentThread().sleep(1000);
             }
             catch (InterruptedException e){
             }
-        try{
-            WebElement ok = driver.findElement(By.xpath("//input[@value='确定']"));
-            ok.click();
-                     try{
-            Thread.currentThread().sleep(3000);
-            }
-            catch (InterruptedException e){
-            }
-            login_btn = driver.findElement(By.xpath("//input[@value='登录']"));
-            login_btn.click();
-        }
-        catch (NoSuchElementException e){
+        boolean login_success = false;
+        while(!login_success){
+            try{
+                WebElement ok = driver.findElement(By.xpath("//input[@value='确定']"));
+                ok.click();
+                try{
+                Thread.currentThread().sleep(3000);
+                }
+                catch (InterruptedException e){
+                }
+                login_btn = driver.findElement(By.xpath("//input[@value='登录']"));
+                login_btn.click();
+                try{
+                Thread.currentThread().sleep(3000);
+                }
+                catch (InterruptedException e){
+                }
+                try{
+                    ok = driver.findElement(By.xpath("//input[@value='确定']"));
+                }    
+                catch (NoSuchElementException e){
+                   login_success = true;
+                }
+             }
+            catch (NoSuchElementException e){
             
+            }
         }
+        
         
             try{
             Thread.currentThread().sleep(10000);
@@ -113,8 +128,8 @@ public class nike_china extends Common{
             }
             return driver;
     }        
-    void cop(int userID){
-        WebDriver driver = login(userID);
+    void cop(String user){
+        WebDriver driver = login(user);
         /*
         get back to product
         */

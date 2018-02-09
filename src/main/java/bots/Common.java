@@ -28,7 +28,7 @@ public abstract class Common {
     static Set<Cookie> cks;
     static Date target = new Date();
     static Date current;
-    
+    static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
     
     void setProductName(String productName){
         Common.productName = productName;
@@ -46,7 +46,7 @@ public abstract class Common {
         target.setSeconds(0);
     }
     public void redayToStart(){
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+        
         current = new Date();       
         while(target.compareTo(current) > 0){
             try{
@@ -55,7 +55,7 @@ public abstract class Common {
                 catch (InterruptedException e){
             }
             current = new Date();
-            //System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
+            System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
         }
         System.out.println(df.format(current));
     }
@@ -68,7 +68,7 @@ public abstract class Common {
 //        };
         for(int i=0;i<threads;i++){
             copones copone = new copones();
-            copone.setUserID(i);
+//            copone.setUserID(i);
             executor.execute(copone);           
         }
         
@@ -78,12 +78,12 @@ public abstract class Common {
         executor.shutdown();
     }
     class copones implements Runnable{
-        private int userID;
+        private String userID;
         public void run(){
             cop(userID);
         }
-        void setUserID(int id){
-            this.userID = id;
+        void setUserID(String user){
+            this.userID = user;
         }
     }
     void TryAndClick(String xpath, WebDriver driver){
@@ -110,7 +110,7 @@ public abstract class Common {
     }
     abstract String getURL();   
     abstract Set<Cookie> login();
-    abstract void cop(int userID);
+    abstract void cop(String user);
     
 
 }

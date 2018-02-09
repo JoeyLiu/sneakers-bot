@@ -31,7 +31,7 @@ public class trophyroom extends Common{
     }
     
     @Override
-    public void cop(int userID){
+    public void cop(String user){
         WebDriver driver = firefox.launch();
         driver.get(getURL());
         

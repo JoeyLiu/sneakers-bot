@@ -28,26 +28,28 @@ public class firefox {
      * @return 
      */
     public static WebDriver launch() {
-       WebDriver driver = null;
-            //        FirefoxBinary firefoxBinary = new FirefoxBinary();
+
+        FirefoxBinary firefoxBinary = new FirefoxBinary();
 //        firefoxBinary.addCommandLineOptions("--headless");
-//         System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
-//        FirefoxOptions firefoxOptions = new FirefoxOptions();
-//       firefoxOptions.setBinary(firefoxBinary);
-//            return new FirefoxDriver(firefoxOptions);
+         System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+       firefoxOptions.setBinary(firefoxBinary);
+            return new FirefoxDriver(firefoxOptions);
 //        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver2.35.exe");
 //        ChromeOptions chromeOptions = new ChromeOptions();
 ////        设置为 headless 模式 （必须）
 //        chromeOptions.addArguments("--headless");
 //        return new ChromeDriver(chromeOptions);
-        try {
-            DesiredCapabilities capability = DesiredCapabilities.firefox();
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
-            
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(firefox.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return driver;
+
+//       WebDriver driver = null;
+//        try {
+//            DesiredCapabilities capability = DesiredCapabilities.firefox();
+//            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+//            
+//        } catch (MalformedURLException ex) {
+//            Logger.getLogger(firefox.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return driver;
     }
    
 }

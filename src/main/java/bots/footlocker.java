@@ -36,7 +36,7 @@ public class footlocker extends Common{
 
     
     @Override
-    public void cop(int userID){
+    public void cop(String user){
         
          
         

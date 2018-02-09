@@ -32,9 +32,9 @@ public class nike_china_fast extends nike_china{
         sku = id;
     }
     
-    void cop(int userID){
+    void cop(String user){
        
-        WebDriver driver = login(userID);
+        WebDriver driver = login(user);
         /*
         get back to product
         */
