@@ -50,7 +50,7 @@ public abstract class Common {
         current = new Date();       
         while(target.compareTo(current) > 0){
             try{
-                Thread.sleep(50);
+                Thread.sleep(100);
             }
                 catch (InterruptedException e){
             }
