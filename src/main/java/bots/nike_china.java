@@ -19,7 +19,7 @@ import org.openqa.selenium.WebElement;
  */
 public class nike_china extends Common{
     private static final String BASEURL = "https://www.nike.com/cn/launch/t/";
-    private static final String[] USERS = {"juneslayer@gmail.com", "121225135@qq.com"};
+    private static final String[] USERS = {"juneslayer@gmail.com", "121225135@qq.com","lyly19821225@sina.com","juneslayer_0@gmail.com"};
     @Override
     public String getURL(){
         return BASEURL + productName;
@@ -128,6 +128,7 @@ public class nike_china extends Common{
        /*
        start
        */
+       System.out.println("Start!");
        long begin = System.currentTimeMillis();
        TryAndClick("//div[@data-juno-name='sizeSelector']", driver);         
 
@@ -136,7 +137,7 @@ public class nike_china extends Common{
         WebElement buy = driver.findElement(By.partialLinkText("购买"));
         buy.click();
                     
-        TryAndClick("//a[text()='提交订单']", driver);
+        //TryAndClick("//a[text()='提交订单']", driver);
         long end = System.currentTimeMillis();
         System.out.println(end-begin);
         

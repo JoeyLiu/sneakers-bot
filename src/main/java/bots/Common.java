@@ -60,7 +60,7 @@ public abstract class Common {
         System.out.println(df.format(current));
     }
     void cops(){
-        int threads = 2;
+        int threads = 4;
         cks = login();
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 //        Runnable copone = () -> {
