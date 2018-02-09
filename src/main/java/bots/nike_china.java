@@ -156,12 +156,21 @@ public class nike_china extends Common{
         long end = System.currentTimeMillis();
         System.out.println(end-begin);
         
-//        int i=0;
-//        while(i<200){
-//        TryAndClick("//a[text()='提交订单']", driver);
-//        i++;
-//        }
-//        System.out.println("try " + i + " times done");
+        boolean retry = false;
+        WebElement retryele;
+        //p 请重试
+        int i=0;
+        while(i<200){
+            try{
+                retryele = driver.findElement(By.partialLinkText("请重试"));               
+                TryAndClick("//a[text()='提交订单']", driver);
+                i++;
+            }
+            catch(NoSuchElementException e){
+                waitforms(100);
+            }
+        }
+       // System.out.println("try " + i + " times done");
 
         //driver.quit();
     }        

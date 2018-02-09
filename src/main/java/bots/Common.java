@@ -86,6 +86,13 @@ public abstract class Common {
             this.userID = user;
         }
     }
+    static void waitforms(int ms){
+            try{
+                Thread.currentThread().sleep(ms);
+            }
+                catch (InterruptedException e){
+            }
+    }
     void TryAndClick(String xpath, WebDriver driver){
         System.out.println("Try..." + xpath);
         try{
