@@ -17,7 +17,7 @@ import org.openqa.selenium.WebElement;
  *
  * @author yueliliu
  */
-public class nike_us extends Common{
+public class nike_us_draw extends nike_us{
     private static final String BASEURL = "https://www.nike.com/launch/t/";
     private static String sku;
     
@@ -114,9 +114,13 @@ public class nike_us extends Common{
        driver.get(getURL());
 
         while(true){
-           try{     
+           try{    
+               /*
+            click OK and click Confirm and click Submit order
+            */
             WebElement submit = driver.findElement(By.partialLinkText("Submit Order"));
             submit.click();
+            
             break;
             }
            catch(Exception e){
