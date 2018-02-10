@@ -6,6 +6,7 @@
 package bots;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -44,6 +45,12 @@ public abstract class Common {
         target.setHours(hour);
         target.setMinutes(minute);
         target.setSeconds(0);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(target);
+        calendar.set(Calendar.MILLISECOND, 0);
+        target = calendar.getTime();
+        //System.out.println(df.format(target));
+        
     }
     public void redayToStart(){
         
@@ -51,7 +58,7 @@ public abstract class Common {
         while(target.compareTo(current) > 0){
             waitforms(100);
             current = new Date();
-            System.out.println("Target: " + df.format(target) + "Current: " + df.format(current));
+            System.out.println("Target: " + df.format(target) + " Current: " + df.format(current));
         }
         System.out.println(df.format(current));
     }
@@ -83,6 +90,7 @@ public abstract class Common {
         }
     }
     static void waitforms(int ms){
+        System.out.println("Wait " + ms + " ms");
             try{
                 Thread.currentThread().sleep(ms);
             }

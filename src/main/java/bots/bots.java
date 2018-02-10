@@ -5,6 +5,11 @@
  */
 package bots;
 
+import static bots.Common.target;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author damaomao
@@ -48,14 +53,29 @@ public class bots {
 //            adi.setClock(0, 10);
 //            adi.cops();
         
-            nike_china nike = new nike_china();
-            nike.setProductName(args[0]);
-            nike.setSize(args[1]);
-            //nike.setID(args[5]);
-            nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
-            //System.out.println(nike.getURL());
-            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
-            nike.cop(args[4]);
+//            nike_china nike = new nike_china();
+//            nike.setProductName(args[0]);
+//            nike.setSize(args[1]);
+//            //nike.setID(args[5]);
+//            nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
+//            //System.out.println(nike.getURL());
+//            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
+//            nike.cop(args[4]);
+            nike_us(args);
+  
+          
+            
 
     }
+    public static void nike_us(String[] args){
+            nike_us nike = new nike_us();
+            nike.setProductName(args[0]);
+            nike.setSize(args[1]);
+            nike.setID(args[5]);
+            nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
+            //System.out.println(nike.getURL());AT7815-002
+            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
+            nike.cop(args[4]);
+    }
+
 }
