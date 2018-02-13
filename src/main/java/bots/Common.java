@@ -25,6 +25,8 @@ import org.openqa.selenium.WebElement;
  * @author damaomao
  */
 public abstract class Common {
+    WebDriver driver = null;
+    String BASEURL = "";
     static String productName;
     static String size;
     static Date date;
@@ -33,6 +35,8 @@ public abstract class Common {
     static Date current;
     static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
     static final Logger LOGGER = Logger.getLogger("myLogger");
+    
+ 
     
     void setProductName(String productName){
         Common.productName = productName;
@@ -56,18 +60,18 @@ public abstract class Common {
         
     }
     public void redayToStart(){
-        
+        LOGGER.log(Level.SEVERE,"Cop set to " + df.format(target) + " Waiting......");
         current = new Date();       
         while(target.compareTo(current) > 0){
             waitforms(100);
             current = new Date();
             LOGGER.log(Level.FINER,"Target: " + df.format(target) + " Current: " + df.format(current));
         }
-        LOGGER.log(Level.SEVERE,df.format(current));
+        LOGGER.log(Level.SEVERE,"Cop starts at " + df.format(current));
     }
     void cops(){
         int threads = 4;
-        cks = login();
+        // login();
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 //        Runnable copone = () -> {
 //            cop();
@@ -119,8 +123,11 @@ public abstract class Common {
         
         
     }
-    abstract String getURL();   
-    abstract Set<Cookie> login();
+    
+    String getURL(){
+        return BASEURL;
+    }  
+    //abstract Set<Cookie> login();
     abstract void cop(String user);
     
 

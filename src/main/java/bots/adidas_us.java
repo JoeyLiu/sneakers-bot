@@ -97,7 +97,7 @@ public class adidas_us extends Common{
     }
     
     
-     @Override
+    
     Set<Cookie> login(){
         WebDriver driver = firefox.launch();
         driver.get(getURL());

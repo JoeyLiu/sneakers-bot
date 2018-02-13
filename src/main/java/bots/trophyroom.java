@@ -24,7 +24,7 @@ public class trophyroom extends Common{
     public String getURL(){
         return BASEURL + productName;
     }
-    @Override
+    
     Set<Cookie> login(){
         
         return cks;
