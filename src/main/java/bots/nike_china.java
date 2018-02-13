@@ -25,7 +25,7 @@ public class nike_china extends nike{
     loginText = "加入或登录";
     loginButtonText = "登录";
     okText = "确定";
-    LOGGER.setLevel(Level.ALL); 
+    LOGGER.setLevel(Level.SEVERE); 
     }
     
     @Override
@@ -47,7 +47,8 @@ public class nike_china extends nike{
         /*
            choose AliPay
            */
-        driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends?action=buy&id=AJ1691-001&size=42");            
+        driver.get("https://www.nike.com/cn/launch/t/kyrie-4-parquet-legends?action=buy&id=AJ1691-001&size=42");     
+        LOGGER.log(Level.SEVERE,"Waiting for ali pay");
         TryAndClick("//a[@data-provide='aliPayId']", driver);
         waitforms(5500);
         WebElement save = driver.findElements(By.partialLinkText("保存并继续")).get(2);

@@ -5,12 +5,14 @@
  */
 package bots;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
@@ -34,9 +36,17 @@ public abstract class Common {
     static Date target = new Date();
     static Date current;
     static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-    static final Logger LOGGER = Logger.getLogger("myLogger");
+    static final Logger LOGGER = Logger.getLogger(Common.class.getName());
     
- 
+   public Common(){
+       //LOGGER.setLevel(Level.SEVERE);
+       try{
+       LOGGER.addHandler(new FileHandler("./" + Common.class.getName() + ".log"));
+       }
+       catch(IOException e){
+           
+       }
+   }
     
     void setProductName(String productName){
         Common.productName = productName;
@@ -111,7 +121,7 @@ public abstract class Common {
         LOGGER.log(Level.FINER,"Element: " + xpath + " found");
 
         ele.click();
-        LOGGER.log(Level.FINER,"Element: " + xpath + " clicked");
+        LOGGER.log(Level.SEVERE,"Element: " + xpath + " clicked");
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
             //e.printStackTrace();

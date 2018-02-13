@@ -70,15 +70,18 @@ abstract class nike extends Common{
         
         String username = user;              
         String password = "Lyly19821225";
+        LOGGER.log(Level.SEVERE,"Open login window");
         WebElement login = driver.findElement(By.xpath("//a[@aria-label='" + loginText + "']"));
         login.click();
         waitforms(15000);
-           
+        
+        LOGGER.log(Level.SEVERE,"Input email and password");
         WebElement userele = driver.findElement(By.name("emailAddress"));
         userele.sendKeys(username);
         WebElement pwd = driver.findElement(By.name("password"));
         pwd.sendKeys(password);
         waitforms(3000);
+        LOGGER.log(Level.SEVERE,"Click login button");
         WebElement login_btn = driver.findElement(By.xpath("//input[@value='" + loginButtonText + "']"));
         login_btn.click();
         waitforms(25000);
@@ -87,6 +90,7 @@ abstract class nike extends Common{
             try{
                 WebElement ok = driver.findElement(By.xpath("//input[@value='" + okText + "']"));
                 ok.click();
+                LOGGER.log(Level.SEVERE,"Login fails, try again");
                 waitforms(3000);
                 login_btn = driver.findElement(By.xpath("//input[@value='" + loginButtonText + "']"));
                 login_btn.click();
@@ -94,6 +98,7 @@ abstract class nike extends Common{
              }
             catch (NoSuchElementException e){
                 login_success = true;
+                LOGGER.log(Level.SEVERE,"Login succeed");
             }
         }
         choosePayMethod();
@@ -104,9 +109,9 @@ abstract class nike extends Common{
         /*
         get back to product
         */
-        LOGGER.log(Level.FINER,"Go to " + getURL());
+        //LOGGER.log(Level.FINER,"Go to " + getURL());
         driver.get(getURL());
-        
+        LOGGER.log(Level.SEVERE,"Reday for " + getURL());
        /*
         ready to start
         */
