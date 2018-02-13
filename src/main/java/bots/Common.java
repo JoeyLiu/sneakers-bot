@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -30,6 +32,7 @@ public abstract class Common {
     static Date target = new Date();
     static Date current;
     static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+    static final Logger LOGGER = Logger.getLogger("myLogger");
     
     void setProductName(String productName){
         Common.productName = productName;
@@ -58,9 +61,9 @@ public abstract class Common {
         while(target.compareTo(current) > 0){
             waitforms(100);
             current = new Date();
-            System.out.println("Target: " + df.format(target) + " Current: " + df.format(current));
+            LOGGER.log(Level.FINER,"Target: " + df.format(target) + " Current: " + df.format(current));
         }
-        System.out.println(df.format(current));
+        LOGGER.log(Level.SEVERE,df.format(current));
     }
     void cops(){
         int threads = 4;
@@ -90,7 +93,7 @@ public abstract class Common {
         }
     }
     static void waitforms(int ms){
-        System.out.println("Wait " + ms + " ms");
+        LOGGER.log(Level.FINER,"Wait for " + ms + " ms");
             try{
                 Thread.currentThread().sleep(ms);
             }
@@ -98,15 +101,17 @@ public abstract class Common {
             }
     }
     void TryAndClick(String xpath, WebDriver driver){
-        System.out.println("Try..." + xpath);
+        LOGGER.log(Level.FINER,"Try..." + xpath);
         try{
         WebElement ele = driver.findElement(By.xpath(xpath));
-        System.out.println("Found");
+        LOGGER.log(Level.FINER,"Element: " + xpath + " found");
+
         ele.click();
-        System.out.println("Clicked");
+        LOGGER.log(Level.FINER,"Element: " + xpath + " clicked");
         }
         catch (NoSuchElementException|ElementNotInteractableException e){
             //e.printStackTrace();
+            LOGGER.log(Level.FINER,e.getMessage());
             waitforms(100);
             
             TryAndClick(xpath, driver);

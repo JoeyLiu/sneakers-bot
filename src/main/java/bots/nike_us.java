@@ -7,6 +7,7 @@ package bots;
 
 import static bots.Common.cks;
 import java.util.Set;
+import java.util.logging.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoSuchElementException;
@@ -41,22 +42,28 @@ public class nike_us extends Common{
         */
         WebDriver driver = firefox.launch();
         driver.get(BASEURL + "sb-air-force-2-low-kevin-bradley");
+        LOGGER.log(Level.FINER,"Open url: " + "sb-air-force-2-low-kevin-bradley");
         waitforms(1000);
         WebElement countryele = driver.findElement(By.xpath("//a[@class='js-lang-tunnel']/img"));
         countryele.click();
+        LOGGER.log(Level.FINER,"Country element clicked");
         waitforms(2000);
         TryAndClick("//span[text()='中国']", driver);
+        LOGGER.log(Level.FINER,"China element clicked");
         waitforms(3000);
         countryele = driver.findElement(By.xpath("//a[@class='js-lang-tunnel']/img"));
         countryele.click();
+        LOGGER.log(Level.FINER,"Country element clicked again");
         waitforms(2000);
         TryAndClick("//span[text()='United States']", driver);
+        LOGGER.log(Level.FINER,"US element clicked");
         waitforms(10000);
         
         String username = user;              
         String password = "Lyly19821225";
         WebElement login = driver.findElement(By.xpath("//a[@aria-label='Join or Log In']"));
         login.click();
+        LOGGER.log(Level.FINER,"Login clicked");
         waitforms(15000);
            
         WebElement userele = driver.findElement(By.name("emailAddress"));
@@ -66,19 +73,23 @@ public class nike_us extends Common{
         waitforms(3000);
         WebElement login_btn = driver.findElement(By.xpath("//input[@value='LOG IN']"));
         login_btn.click();
+        LOGGER.log(Level.FINER,"Log in button clicked");
         waitforms(25000);
         boolean login_success = false;
         while(!login_success){
             try{
                 WebElement ok = driver.findElement(By.xpath("//input[@value='OK']"));
                 ok.click();
+                LOGGER.log(Level.SEVERE,"Log in fail, click OK and try again");
                 waitforms(3000);
                 login_btn = driver.findElement(By.xpath("//input[@value='LOG IN']"));
                 login_btn.click();
+                LOGGER.log(Level.FINER,"Log in button clicked");
                 waitforms(3000);
              }
             catch (NoSuchElementException e){
                 login_success = true;
+                LOGGER.log(Level.FINER,"OK button doesn't exist, login succeed.");
             }
         }
         //waitforms(10000);
@@ -96,7 +107,9 @@ public class nike_us extends Common{
         return driver;
     }        
     void cop(String user){
+        LOGGER.log(Level.FINER,"Start login");
         WebDriver driver = login(user);
+        LOGGER.log(Level.FINER,"Start copping");
         /*
         get back to product
         */
@@ -112,7 +125,12 @@ public class nike_us extends Common{
        */
        long begin = System.currentTimeMillis();
        driver.get(getURL());
-
+       /*
+       Queue:
+       Submit Order -> Done
+       Submit Order -> try again -> Submit Order
+       
+       */
         while(true){
            try{     
             WebElement submit = driver.findElement(By.partialLinkText("Submit Order"));
@@ -123,8 +141,12 @@ public class nike_us extends Common{
                //e.printStackTrace();
            }
            try{
-               driver.findElement(By.partialLinkText("OK")).click();
-               driver.get(getURL());
+               driver.findElement(By.partialLinkText("OK")).click();               
+            }
+            catch(Exception e2){
+            }  
+                      try{
+               driver.findElement(By.partialLinkText("Confirm")).click();               
             }
             catch(Exception e2){
             }  
