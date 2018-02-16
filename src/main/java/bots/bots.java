@@ -34,12 +34,13 @@ import java.util.Date;
 public class bots {
     public static void main(String[] args) throws InterruptedException{       
        
-//        footlocker footlocker = new footlocker();
-//        footlocker.setModel("288527");
-//        footlocker.setSku("24453006");
-//        footlocker.setSize("08.0");
-//        footlocker.setProductName("nike-air-vapormax-plus-mens");
-//        footlocker.cop();
+        footlocker footlocker = new footlocker();
+        footlocker.setModel("78300");
+        footlocker.setSku("52630602");
+        footlocker.setSize("09.0");
+        footlocker.setProductName("nike-air-max-plus-mens/maroon/white/");
+        footlocker.setClock(22, 38);
+        footlocker.cops();
           
 //        trophyroom tr = new trophyroom();
 //        tr.setProductName("air-jordan-1-retro-soh-barely-grape-1");
@@ -68,7 +69,7 @@ public class bots {
             //test.test_nike_us();
             
             //nike_china(args);
-            nike_us(args);
+            //nike_us(args);
             
 
     }

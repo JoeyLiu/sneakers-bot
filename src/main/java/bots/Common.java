@@ -37,6 +37,7 @@ public abstract class Common {
     static Date current;
     static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
     static final Logger LOGGER = Logger.getLogger(Common.class.getName());
+    String[] sizes={"08.0","08.5","09.0","09.5"};
     
    public Common(){
        //LOGGER.setLevel(Level.SEVERE);
@@ -79,15 +80,21 @@ public abstract class Common {
         }
         LOGGER.log(Level.SEVERE,"Cop starts at " + df.format(current));
     }
+    
+    Set<Cookie> login(){
+        
+        return null;
+    }
+    
     void cops(){
         int threads = 4;
-        // login();
+        login();
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 //        Runnable copone = () -> {
-//            cop();
+//            cop("test");
 //        };
         for(int i=0;i<threads;i++){
-            copones copone = new copones();
+            copones copone = new copones(i);
 //            copone.setUserID(i);
             executor.execute(copone);           
         }
@@ -98,13 +105,17 @@ public abstract class Common {
         executor.shutdown();
     }
     class copones implements Runnable{
-        private String userID;
+        int sizeSeq;
+        public copones(int sizeID){
+            sizeSeq = sizeID;
+        }
+        private String size = sizes[sizeSeq];
         public void run(){
-            cop(userID);
+            cop(size);
         }
-        void setUserID(String user){
-            this.userID = user;
-        }
+//        void setUserID(String user){
+//            this.userID = user;
+//        }
     }
     static void waitforms(int ms){
         LOGGER.log(Level.FINER,"Wait for " + ms + " ms");
@@ -137,6 +148,7 @@ public abstract class Common {
     String getURL(){
         return BASEURL;
     }  
+
     //abstract Set<Cookie> login();
     abstract void cop(String user);
     
