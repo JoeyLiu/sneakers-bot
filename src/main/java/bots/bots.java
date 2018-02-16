@@ -64,7 +64,11 @@ public class bots {
             //nike_us(args);
             
             //test.test_nike_china();
-            nike_china(args);
+            
+            //test.test_nike_us();
+            
+            //nike_china(args);
+            nike_us(args);
             
 
     }
@@ -85,7 +89,7 @@ public class bots {
             nike.setID(args[5]);
             nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
             //System.out.println(nike.getURL());AT7815-002
-            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
+            //https://www.nike.com/cn/launch/t/air-jordan-3-free-throw-line?id=923096-101&size=9
             nike.cop(args[4]);
     }
 

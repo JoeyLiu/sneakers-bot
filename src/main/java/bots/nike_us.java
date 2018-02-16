@@ -5,6 +5,7 @@
  */
 package bots;
 
+import java.util.logging.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -21,6 +22,17 @@ public class nike_us extends nike{
         loginText = "Join or Log In";
         loginButtonText = "LOG IN";
         okText = "OK";
+       
+        enterTexts.add("Submit Order");
+        enterTexts.add("SUBMIT ORDER");
+        enterTexts.add("Ok");
+        enterTexts.add("OK");
+        enterTexts.add("Confirm");
+        enterTexts.add("CONFIRM");
+   
+    
+        LOGGER.setLevel(Level.SEVERE); 
+ 
     }
     
     @Override
@@ -43,7 +55,7 @@ public class nike_us extends nike{
     }
     
     void choosePayMethod(){
-        
+        LOGGER.log(Level.SEVERE,"Skipping choose pay method in US");
     }
     
     

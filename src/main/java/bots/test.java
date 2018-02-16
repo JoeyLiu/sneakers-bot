@@ -29,5 +29,17 @@ public class test {
             //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
             nike.cop(args[4]);
     }
+        public static void test_nike_us(){
+        String[] args={"air-jordan-3-retro-og-cement-2018","8","21","57","juneslayer@gmail.com","854262-001"};
+            nike_us nike = new nike_us();
+            
+            nike.setProductName(args[0]);
+            nike.setSize(args[1]);
+            nike.setID(args[5]);
+            nike.setClock(Integer.valueOf(args[2]), Integer.valueOf(args[3]));
+            //System.out.println(nike.getURL());AT7815-002
+            //https://www.nike.com/cn/launch/t/sb-air-force-2-low-kevin-bradley?id=AO0298-114&size=42
+            nike.cop(args[4]);
+    }
     
 }

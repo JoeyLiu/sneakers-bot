@@ -30,6 +30,35 @@ abstract class nike extends Common{
     }
     abstract void countrySelect();
     abstract void choosePayMethod();
+        void cop(String user){
+        login(user);
+        /*
+        get back to product
+        */
+        //LOGGER.log(Level.FINER,"Go to " + getURL());
+        driver.get(getURL());
+        LOGGER.log(Level.SEVERE,"Reday for " + getURL());
+       /*
+        ready to start
+        */
+       redayToStart();
+       
+       /*
+       start
+       */
+       long begin = System.currentTimeMillis();
+       LOGGER.log(Level.FINER,"Go to " + getURL());
+       driver.get(getURL());
+
+       enter();
+           
+       //TryAndClick("//a[text()='提交订单']", driver);
+        
+       long end = System.currentTimeMillis();
+
+       System.out.println(end-begin);
+        //driver.quit();
+    }        
     void enter(){
         while(true){
             for(int i=0;i<enterTexts.size();i++){
@@ -104,50 +133,5 @@ abstract class nike extends Common{
         choosePayMethod();
         
     }        
-    void cop(String user){
-        login(user);
-        /*
-        get back to product
-        */
-        //LOGGER.log(Level.FINER,"Go to " + getURL());
-        driver.get(getURL());
-        LOGGER.log(Level.SEVERE,"Reday for " + getURL());
-       /*
-        ready to start
-        */
-       redayToStart();
-       
-       /*
-       start
-       */
-       long begin = System.currentTimeMillis();
-       LOGGER.log(Level.FINER,"Go to " + getURL());
-       driver.get(getURL());
 
-       enter();
-           
-       //TryAndClick("//a[text()='提交订单']", driver);
-        
-       long end = System.currentTimeMillis();
-        
-        
-//       int i=0;
-//       int j=0;
-//       while(i<200 && j<3000){
-//            try{
-//                WebElement retryele = driver.findElement(By.partialLinkText("Please try again"));               
-//                TryAndClick("//a[text()='Submit Order']", driver);
-//                i++;
-//            }
-//            catch(NoSuchElementException e){
-//                System.out.println("retry");
-//                waitforms(100);
-//                j++;
-//            }
-//       }
-//       System.out.println("try " + i + " times done");
-
-       System.out.println(end-begin);
-        //driver.quit();
-    }        
 }

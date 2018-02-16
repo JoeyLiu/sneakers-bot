@@ -2,9 +2,31 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-02-14T00:00:11</date>
-  <millis>1518537611048</millis>
+  <date>2018-02-14T21:56:04</date>
+  <millis>1518616564226</millis>
   <sequence>1</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>TryAndClick</method>
+  <thread>1</thread>
+  <message>Element: //span[text()='中国'] clicked</message>
+</record>
+<record>
+  <date>2018-02-14T21:56:11</date>
+  <millis>1518616571402</millis>
+  <sequence>2</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>TryAndClick</method>
+  <thread>1</thread>
+  <message>Element: //span[text()='United States'] clicked</message>
+</record>
+<record>
+  <date>2018-02-14T21:56:21</date>
+  <millis>1518616581408</millis>
+  <sequence>3</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
@@ -13,9 +35,9 @@
   <message>Open login window</message>
 </record>
 <record>
-  <date>2018-02-14T00:00:26</date>
-  <millis>1518537626501</millis>
-  <sequence>2</sequence>
+  <date>2018-02-14T21:56:36</date>
+  <millis>1518616596754</millis>
+  <sequence>4</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
@@ -24,9 +46,9 @@
   <message>Input email and password</message>
 </record>
 <record>
-  <date>2018-02-14T00:00:29</date>
-  <millis>1518537629679</millis>
-  <sequence>3</sequence>
+  <date>2018-02-14T21:56:39</date>
+  <millis>1518616599937</millis>
+  <sequence>5</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
@@ -35,9 +57,9 @@
   <message>Click login button</message>
 </record>
 <record>
-  <date>2018-02-14T00:00:55</date>
-  <millis>1518537655051</millis>
-  <sequence>4</sequence>
+  <date>2018-02-14T21:57:05</date>
+  <millis>1518616625323</millis>
+  <sequence>6</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
@@ -46,1311 +68,541 @@
   <message>Login succeed</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:06</date>
-  <millis>1518537666309</millis>
-  <sequence>5</sequence>
+  <date>2018-02-14T21:57:05</date>
+  <millis>1518616625323</millis>
+  <sequence>7</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
-  <class>bots.nike_china</class>
+  <class>bots.nike_us</class>
   <method>choosePayMethod</method>
   <thread>1</thread>
-  <message>Waiting for ali pay</message>
+  <message>Skipping choose pay method in US</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:12</date>
-  <millis>1518537672403</millis>
-  <sequence>6</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.Common</class>
-  <method>TryAndClick</method>
-  <thread>1</thread>
-  <message>Element: //a[@data-provide='aliPayId'] clicked</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:21</date>
-  <millis>1518537681608</millis>
-  <sequence>7</sequence>
+  <date>2018-02-14T21:57:28</date>
+  <millis>1518616648939</millis>
+  <sequence>8</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>cop</method>
   <thread>1</thread>
-  <message>Reday for https://www.nike.com/cn/launch/t/air-jordan-3-retro-og-cement-2018?action=buy&amp;id=AO0298-114&amp;size=42</message>
+  <message>Reday for https://www.nike.com/launch/t/air-jordan-3-retro-og-cement-2018?action=buy&amp;id=854262-001&amp;size=42</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:21</date>
-  <millis>1518537681608</millis>
-  <sequence>8</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.Common</class>
-  <method>redayToStart</method>
-  <thread>1</thread>
-  <message>Cop set to 2018-02-13 23:40:00:000 Waiting......</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:21</date>
-  <millis>1518537681608</millis>
+  <date>2018-02-14T21:57:28</date>
+  <millis>1518616648939</millis>
   <sequence>9</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.Common</class>
   <method>redayToStart</method>
   <thread>1</thread>
-  <message>Cop starts at 2018-02-14 00:01:21:608</message>
+  <message>Cop set to 2018-02-14 21:57:00:000 Waiting......</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:22</date>
-  <millis>1518537682504</millis>
+  <date>2018-02-14T21:57:28</date>
+  <millis>1518616648939</millis>
   <sequence>10</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Cop starts at 2018-02-14 21:57:28:939</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:22</date>
-  <millis>1518537682690</millis>
+  <date>2018-02-14T21:57:33</date>
+  <millis>1518616653750</millis>
   <sequence>11</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:22</date>
-  <millis>1518537682938</millis>
+  <date>2018-02-14T21:57:34</date>
+  <millis>1518616654031</millis>
   <sequence>12</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:23</date>
-  <millis>1518537683553</millis>
+  <date>2018-02-14T21:57:34</date>
+  <millis>1518616654219</millis>
   <sequence>13</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:23</date>
-  <millis>1518537683671</millis>
+  <date>2018-02-14T21:57:34</date>
+  <millis>1518616654605</millis>
   <sequence>14</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:24</date>
-  <millis>1518537684035</millis>
+  <date>2018-02-14T21:57:34</date>
+  <millis>1518616654730</millis>
   <sequence>15</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:24</date>
-  <millis>1518537684678</millis>
+  <date>2018-02-14T21:57:34</date>
+  <millis>1518616654855</millis>
   <sequence>16</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:24</date>
-  <millis>1518537684787</millis>
+  <date>2018-02-14T21:57:35</date>
+  <millis>1518616655206</millis>
   <sequence>17</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:24</date>
-  <millis>1518537684903</millis>
+  <date>2018-02-14T21:57:35</date>
+  <millis>1518616655331</millis>
   <sequence>18</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:25</date>
-  <millis>1518537685237</millis>
+  <date>2018-02-14T21:57:35</date>
+  <millis>1518616655440</millis>
   <sequence>19</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:25</date>
-  <millis>1518537685342</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656154</millis>
   <sequence>20</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok Clicked.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:25</date>
-  <millis>1518537685452</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656165</millis>
   <sequence>21</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:25</date>
-  <millis>1518537685788</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656300</millis>
   <sequence>22</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:25</date>
-  <millis>1518537685897</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656628</millis>
   <sequence>23</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:26</date>
-  <millis>1518537686024</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656769</millis>
   <sequence>24</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:26</date>
-  <millis>1518537686688</millis>
+  <date>2018-02-14T21:57:36</date>
+  <millis>1518616656878</millis>
   <sequence>25</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:26</date>
-  <millis>1518537686808</millis>
+  <date>2018-02-14T21:57:37</date>
+  <millis>1518616657241</millis>
   <sequence>26</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:26</date>
-  <millis>1518537686918</millis>
+  <date>2018-02-14T21:57:37</date>
+  <millis>1518616657359</millis>
   <sequence>27</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:27</date>
-  <millis>1518537687287</millis>
+  <date>2018-02-14T21:57:37</date>
+  <millis>1518616657468</millis>
   <sequence>28</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:27</date>
-  <millis>1518537687387</millis>
+  <date>2018-02-14T21:57:37</date>
+  <millis>1518616657896</millis>
   <sequence>29</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:27</date>
-  <millis>1518537687520</millis>
+  <date>2018-02-14T21:57:38</date>
+  <millis>1518616658026</millis>
   <sequence>30</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:27</date>
-  <millis>1518537687896</millis>
+  <date>2018-02-14T21:57:38</date>
+  <millis>1518616658130</millis>
   <sequence>31</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:28</date>
-  <millis>1518537688041</millis>
+  <date>2018-02-14T21:57:38</date>
+  <millis>1518616658475</millis>
   <sequence>32</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:28</date>
-  <millis>1518537688213</millis>
+  <date>2018-02-14T21:57:38</date>
+  <millis>1518616658616</millis>
   <sequence>33</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:28</date>
-  <millis>1518537688524</millis>
+  <date>2018-02-14T21:57:38</date>
+  <millis>1518616658742</millis>
   <sequence>34</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:28</date>
-  <millis>1518537688634</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659141</millis>
   <sequence>35</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:28</date>
-  <millis>1518537688749</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659297</millis>
   <sequence>36</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:29</date>
-  <millis>1518537689106</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659422</millis>
   <sequence>37</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:29</date>
-  <millis>1518537689533</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659750</millis>
   <sequence>38</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 Clicked.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:29</date>
-  <millis>1518537689565</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659860</millis>
   <sequence>39</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:29</date>
-  <millis>1518537689903</millis>
+  <date>2018-02-14T21:57:39</date>
+  <millis>1518616659960</millis>
   <sequence>40</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:30</date>
-  <millis>1518537690004</millis>
+  <date>2018-02-14T21:57:40</date>
+  <millis>1518616660330</millis>
   <sequence>41</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:30</date>
-  <millis>1518537690129</millis>
+  <date>2018-02-14T21:57:40</date>
+  <millis>1518616660470</millis>
   <sequence>42</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:30</date>
-  <millis>1518537690508</millis>
+  <date>2018-02-14T21:57:40</date>
+  <millis>1518616660689</millis>
   <sequence>43</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:30</date>
-  <millis>1518537690633</millis>
+  <date>2018-02-14T21:57:41</date>
+  <millis>1518616661189</millis>
   <sequence>44</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:30</date>
-  <millis>1518537690758</millis>
+  <date>2018-02-14T21:57:41</date>
+  <millis>1518616661314</millis>
   <sequence>45</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691128</millis>
+  <date>2018-02-14T21:57:41</date>
+  <millis>1518616661439</millis>
   <sequence>46</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691237</millis>
+  <date>2018-02-14T21:57:41</date>
+  <millis>1518616661799</millis>
   <sequence>47</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691371</millis>
+  <date>2018-02-14T21:57:41</date>
+  <millis>1518616661901</millis>
   <sequence>48</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691733</millis>
+  <date>2018-02-14T21:57:42</date>
+  <millis>1518616662025</millis>
   <sequence>49</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691847</millis>
+  <date>2018-02-14T21:57:42</date>
+  <millis>1518616662364</millis>
   <sequence>50</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:31</date>
-  <millis>1518537691961</millis>
+  <date>2018-02-14T21:57:42</date>
+  <millis>1518616662489</millis>
   <sequence>51</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:32</date>
-  <millis>1518537692323</millis>
+  <date>2018-02-14T21:57:42</date>
+  <millis>1518616662599</millis>
   <sequence>52</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:32</date>
-  <millis>1518537692454</millis>
+  <date>2018-02-14T21:57:42</date>
+  <millis>1518616662980</millis>
   <sequence>53</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确定 NOT found.</message>
+  <message>Ok NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:32</date>
-  <millis>1518537692568</millis>
+  <date>2018-02-14T21:57:43</date>
+  <millis>1518616663089</millis>
   <sequence>54</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>OK NOT found.</message>
 </record>
 <record>
-  <date>2018-02-14T00:01:32</date>
-  <millis>1518537692927</millis>
+  <date>2018-02-14T21:57:43</date>
+  <millis>1518616663214</millis>
   <sequence>55</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.nike</class>
   <method>enter</method>
   <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:33</date>
-  <millis>1518537693044</millis>
-  <sequence>56</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:33</date>
-  <millis>1518537693169</millis>
-  <sequence>57</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:33</date>
-  <millis>1518537693544</millis>
-  <sequence>58</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:33</date>
-  <millis>1518537693669</millis>
-  <sequence>59</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:33</date>
-  <millis>1518537693785</millis>
-  <sequence>60</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694145</millis>
-  <sequence>61</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694270</millis>
-  <sequence>62</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694417</millis>
-  <sequence>63</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694755</millis>
-  <sequence>64</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694864</millis>
-  <sequence>65</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:34</date>
-  <millis>1518537694974</millis>
-  <sequence>66</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:35</date>
-  <millis>1518537695353</millis>
-  <sequence>67</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:35</date>
-  <millis>1518537695486</millis>
-  <sequence>68</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:35</date>
-  <millis>1518537695595</millis>
-  <sequence>69</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:35</date>
-  <millis>1518537695984</millis>
-  <sequence>70</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:36</date>
-  <millis>1518537696104</millis>
-  <sequence>71</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:36</date>
-  <millis>1518537696207</millis>
-  <sequence>72</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:36</date>
-  <millis>1518537696562</millis>
-  <sequence>73</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:36</date>
-  <millis>1518537696685</millis>
-  <sequence>74</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:36</date>
-  <millis>1518537696789</millis>
-  <sequence>75</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697127</millis>
-  <sequence>76</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697237</millis>
-  <sequence>77</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697377</millis>
-  <sequence>78</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697740</millis>
-  <sequence>79</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697850</millis>
-  <sequence>80</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:37</date>
-  <millis>1518537697960</millis>
-  <sequence>81</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:38</date>
-  <millis>1518537698285</millis>
-  <sequence>82</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:38</date>
-  <millis>1518537698387</millis>
-  <sequence>83</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:38</date>
-  <millis>1518537698489</millis>
-  <sequence>84</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:38</date>
-  <millis>1518537698805</millis>
-  <sequence>85</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:38</date>
-  <millis>1518537698915</millis>
-  <sequence>86</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:39</date>
-  <millis>1518537699022</millis>
-  <sequence>87</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:39</date>
-  <millis>1518537699403</millis>
-  <sequence>88</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:39</date>
-  <millis>1518537699520</millis>
-  <sequence>89</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:39</date>
-  <millis>1518537699645</millis>
-  <sequence>90</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:39</date>
-  <millis>1518537699960</millis>
-  <sequence>91</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:40</date>
-  <millis>1518537700067</millis>
-  <sequence>92</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:40</date>
-  <millis>1518537700176</millis>
-  <sequence>93</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:40</date>
-  <millis>1518537700551</millis>
-  <sequence>94</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:40</date>
-  <millis>1518537700660</millis>
-  <sequence>95</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:40</date>
-  <millis>1518537700770</millis>
-  <sequence>96</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701101</millis>
-  <sequence>97</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701226</millis>
-  <sequence>98</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701341</millis>
-  <sequence>99</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701669</millis>
-  <sequence>100</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701771</millis>
-  <sequence>101</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:41</date>
-  <millis>1518537701881</millis>
-  <sequence>102</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:42</date>
-  <millis>1518537702504</millis>
-  <sequence>103</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:42</date>
-  <millis>1518537702629</millis>
-  <sequence>104</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:42</date>
-  <millis>1518537702729</millis>
-  <sequence>105</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703050</millis>
-  <sequence>106</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703175</millis>
-  <sequence>107</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703284</millis>
-  <sequence>108</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703599</millis>
-  <sequence>109</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703710</millis>
-  <sequence>110</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:43</date>
-  <millis>1518537703841</millis>
-  <sequence>111</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:44</date>
-  <millis>1518537704161</millis>
-  <sequence>112</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:44</date>
-  <millis>1518537704286</millis>
-  <sequence>113</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:44</date>
-  <millis>1518537704395</millis>
-  <sequence>114</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:44</date>
-  <millis>1518537704769</millis>
-  <sequence>115</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:44</date>
-  <millis>1518537704896</millis>
-  <sequence>116</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:45</date>
-  <millis>1518537705011</millis>
-  <sequence>117</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:45</date>
-  <millis>1518537705386</millis>
-  <sequence>118</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:45</date>
-  <millis>1518537705493</millis>
-  <sequence>119</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:45</date>
-  <millis>1518537705651</millis>
-  <sequence>120</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:46</date>
-  <millis>1518537706017</millis>
-  <sequence>121</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>提交订单 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:46</date>
-  <millis>1518537706142</millis>
-  <sequence>122</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确定 NOT found.</message>
-</record>
-<record>
-  <date>2018-02-14T00:01:46</date>
-  <millis>1518537706267</millis>
-  <sequence>123</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.nike</class>
-  <method>enter</method>
-  <thread>1</thread>
-  <message>确认 NOT found.</message>
+  <message>Confirm NOT found.</message>
 </record>
