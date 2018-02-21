@@ -66,20 +66,7 @@ public class Send {
         String result = sendPostToFootLocker(sb.toString(), cookie);
         System.out.println(result);
     }
-        private static class DefaultTrustManager implements X509TrustManager {
-        @Override
-        public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-        }
-
-        @Override
-        public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-        }
-
-        @Override
-        public X509Certificate[] getAcceptedIssuers() {
-            return null;
-        }
-    }
+    
     /**
      * 向指定 URL 发送POST方法的请求
      * 
@@ -90,33 +77,14 @@ public class Send {
      * @return 所代表远程资源的响应结果
      */
     static String sendPostToFootLocker(String param, String cookie) {
-        SSLContext ctx = null;
-        try {
-            ctx = SSLContext.getInstance("TLS");
-            ctx.init(new KeyManager[0], new TrustManager[] { new DefaultTrustManager() }, new SecureRandom());
-        } catch (KeyManagementException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        SSLSocketFactory ssf = ctx.getSocketFactory();
+        
         PrintWriter out = null;
         BufferedReader in = null;
         final String FL = "https://www.footlocker.com/catalog/miniAddToCart.cfm?secure=1&";
         String result = "";
         try {
-            URL url = new URL(FL);
-            // 打开和URL之间的连接
-            HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
-            conn.setSSLSocketFactory(ssf);
-            conn.setHostnameVerifier(new HostnameVerifier() {
-            @Override
-            public boolean verify(String arg0, SSLSession arg1) {
-                return true;
-            }
-        });
+            HttpsURLConnection conn = util.getHttpsConn(FL);
+            
             // 设置通用的请求属性
             conn.setRequestProperty("accept", "*/*");
             conn.setRequestProperty("connection", "Keep-Alive");
@@ -131,9 +99,7 @@ public class Send {
             conn.setRequestProperty("Accept-Language", "en,zh-CN;q=0.9,zh;q=0.8");
             conn.setRequestProperty("Cookie", cookie);
             
-            // 发送POST请求必须设置如下两行
-            conn.setDoOutput(true);
-            conn.setDoInput(true);
+            
             // 获取URLConnection对象对应的输出流
             out = new PrintWriter(conn.getOutputStream());
             // 发送请求参数
@@ -147,6 +113,7 @@ public class Send {
 //            while ((line = in.readLine()) != null) {
 //                result += line;
 //            }
+            
             util.getResponseHeader(conn);
 
         } catch (Exception e) {
