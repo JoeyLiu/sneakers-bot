@@ -2,47 +2,135 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-02-16T22:36:16</date>
-  <millis>1518791776736</millis>
-  <sequence>3</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.Common</class>
-  <method>redayToStart</method>
-  <thread>14</thread>
-  <message>Cop set to 2018-02-16 22:38:00:000 Waiting......</message>
-</record>
-<record>
-  <date>2018-02-16T22:36:19</date>
-  <millis>1518791779928</millis>
-  <sequence>4</sequence>
-  <logger>bots.Common</logger>
-  <level>SEVERE</level>
-  <class>bots.Common</class>
-  <method>redayToStart</method>
-  <thread>15</thread>
-  <message>Cop set to 2018-02-16 22:38:00:000 Waiting......</message>
-</record>
-<record>
-  <date>2018-02-16T22:38:00</date>
-  <millis>1518791880094</millis>
+  <date>2018-02-16T22:56:15</date>
+  <millis>1518792975289</millis>
   <sequence>5</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.Common</class>
   <method>redayToStart</method>
-  <thread>14</thread>
-  <message>Cop starts at 2018-02-16 22:38:00:094</message>
+  <thread>15</thread>
+  <message>Cop set to 2018-02-16 23:00:00:000 Waiting......</message>
 </record>
 <record>
-  <date>2018-02-16T22:38:00</date>
-  <millis>1518791880094</millis>
+  <date>2018-02-16T22:56:15</date>
+  <millis>1518792975981</millis>
   <sequence>6</sequence>
   <logger>bots.Common</logger>
   <level>SEVERE</level>
   <class>bots.Common</class>
   <method>redayToStart</method>
+  <thread>16</thread>
+  <message>Cop set to 2018-02-16 23:00:00:000 Waiting......</message>
+</record>
+<record>
+  <date>2018-02-16T22:56:24</date>
+  <millis>1518792984223</millis>
+  <sequence>7</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
+  <thread>14</thread>
+  <message>Cop set to 2018-02-16 23:00:00:000 Waiting......</message>
+</record>
+<record>
+  <date>2018-02-16T22:56:24</date>
+  <millis>1518792984515</millis>
+  <sequence>8</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
+  <thread>17</thread>
+  <message>Cop set to 2018-02-16 23:00:00:000 Waiting......</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:00</date>
+  <millis>1518793200074</millis>
+  <sequence>9</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
+  <thread>16</thread>
+  <message>Cop starts at 2018-02-16 23:00:00:074</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:00</date>
+  <millis>1518793200220</millis>
+  <sequence>10</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
+  <thread>14</thread>
+  <message>Cop starts at 2018-02-16 23:00:00:220</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:00</date>
+  <millis>1518793200224</millis>
+  <sequence>11</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
   <thread>15</thread>
-  <message>Cop starts at 2018-02-16 22:38:00:094</message>
+  <message>Cop starts at 2018-02-16 23:00:00:221</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:00</date>
+  <millis>1518793200277</millis>
+  <sequence>12</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.Common</class>
+  <method>redayToStart</method>
+  <thread>17</thread>
+  <message>Cop starts at 2018-02-16 23:00:00:224</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:24</date>
+  <millis>1518793224865</millis>
+  <sequence>13</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.footlocker</class>
+  <method>cop</method>
+  <thread>15</thread>
+  <message>Cop size: 09.0</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:27</date>
+  <millis>1518793227239</millis>
+  <sequence>14</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.footlocker</class>
+  <method>cop</method>
+  <thread>14</thread>
+  <message>Cop size: 08.5</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:28</date>
+  <millis>1518793228398</millis>
+  <sequence>15</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.footlocker</class>
+  <method>cop</method>
+  <thread>17</thread>
+  <message>Cop size: 10.0</message>
+</record>
+<record>
+  <date>2018-02-16T23:00:34</date>
+  <millis>1518793234024</millis>
+  <sequence>16</sequence>
+  <logger>bots.Common</logger>
+  <level>SEVERE</level>
+  <class>bots.footlocker</class>
+  <method>cop</method>
+  <thread>16</thread>
+  <message>Cop size: 09.5</message>
 </record>
 </log>

@@ -35,11 +35,11 @@ public class bots {
     public static void main(String[] args) throws InterruptedException{       
        
         footlocker footlocker = new footlocker();
-        footlocker.setModel("78300");
-        footlocker.setSku("52630602");
+        footlocker.setModel("190074");
+        footlocker.setSku("61428007");
         footlocker.setSize("09.0");
-        footlocker.setProductName("nike-air-max-plus-mens/maroon/white/");
-        footlocker.setClock(22, 38);
+        footlocker.setProductName("jordan-retro-1-high-og-mens");
+        footlocker.setClock(23, 0);
         footlocker.cops();
           
 //        trophyroom tr = new trophyroom();

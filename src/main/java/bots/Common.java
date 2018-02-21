@@ -37,7 +37,7 @@ public abstract class Common {
     static Date current;
     static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
     static final Logger LOGGER = Logger.getLogger(Common.class.getName());
-    String[] sizes={"08.0","08.5","09.0","09.5"};
+    String[] sizes={"08.5","09.0","09.5","10.0","10.5"};
     
    public Common(){
        //LOGGER.setLevel(Level.SEVERE);
@@ -109,8 +109,10 @@ public abstract class Common {
         public copones(int sizeID){
             sizeSeq = sizeID;
         }
-        private String size = sizes[sizeSeq];
+        
+       
         public void run(){
+            String size = sizes[sizeSeq];
             cop(size);
         }
 //        void setUserID(String user){

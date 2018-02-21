@@ -34,7 +34,7 @@
             </descriptorRefs>
             <archive>
                 <manifest>
-                    <mainClass>bots.bots</mainClass>
+                    <mainClass>packets.Send</mainClass>
                 </manifest>
             </archive>
         </configuration>
