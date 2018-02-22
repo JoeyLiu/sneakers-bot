@@ -119,7 +119,7 @@ public abstract class Common {
 //            this.userID = user;
 //        }
     }
-    static void waitforms(int ms){
+    public static void waitforms(int ms){
         LOGGER.log(Level.FINER,"Wait for " + ms + " ms");
             try{
                 Thread.currentThread().sleep(ms);

@@ -32,8 +32,8 @@ public class util {
                     Map<String, List<String>> map = conn.getHeaderFields();
             for (Map.Entry<String, List<String>> entry : map.entrySet()) {
                 if(null != entry.getKey()){
-                                        System.out.println(entry.getKey() +
-                             ": " + entry.getValue());
+//                                        System.out.println(entry.getKey() +
+//                             ": " + entry.getValue());
                 }
                 else{
                     System.out.println(entry.getValue());
